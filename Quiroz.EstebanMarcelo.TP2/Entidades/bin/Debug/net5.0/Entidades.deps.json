@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Entidades/1.0.0": {
+        "dependencies": {
+          "EntidadesDAO": "1.0.0"
+        },
+        "runtime": {
+          "Entidades.dll": {}
+        }
+      },
+      "EntidadesDAO/1.0.0": {
+        "runtime": {
+          "EntidadesDAO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Entidades/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntidadesDAO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
