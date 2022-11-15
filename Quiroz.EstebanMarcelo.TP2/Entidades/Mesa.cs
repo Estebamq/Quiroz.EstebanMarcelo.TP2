@@ -126,11 +126,11 @@ namespace Entidades
 
                 if (tantosUno > tantosDos) 
                 {
-                    jugadorUno.Tantos += 2;
+                    this.jugadorUno.Tantos += 2;
                 }
                 else if(tantosDos>tantosUno) 
                 {
-                    jugadorDos.Tantos += 2;
+                    this.jugadorDos.Tantos += 2;
                 }
                 
             }
@@ -170,12 +170,12 @@ namespace Entidades
 
                 if (rondaGanadaJugadorUno > rondaGanadaJugadorDos)
                 {
-                    jugadorUno.Tantos += 2;
+                    this.jugadorUno.Tantos += 2;
                 }
                 else if (rondaGanadaJugadorUno < rondaGanadaJugadorDos)
                 {
 
-                    jugadorDos.Tantos += 2;
+                    this.jugadorDos.Tantos += 2;
                 }
             }
             
@@ -190,8 +190,43 @@ namespace Entidades
         //Sumar puntos
 
         //Mostrar resultados
+        private string MostrarResultados()
+        {
+            StringBuilder sb = new StringBuilder();
+            string ganador;
+
+            sb.AppendLine($"Jugador Uno: \n Apodo:{this.jugadorUno.Apodo}\n Tantos:{this.jugadorUno.Tantos} ");
+            sb.AppendLine($"Jugador Dos: \n Apodo:{this.jugadorDos.Apodo}\n Tantos:{this.jugadorDos.Tantos} ");
+            if (jugadorUno.Tantos > jugadorDos.Tantos)
+            {
+
+                ganador = "Jugador Uno";
+            }
+            else
+            {
+                if (jugadorUno.Tantos == jugadorDos.Tantos)
+                {
+                    ganador = "Empate";
+                }
+                else
+                {
+                    ganador = "Jugador Dos";
+                }
+
+            }
+            sb.AppendLine($"Ganador: {ganador}");
 
 
+            return sb.ToString();
+
+        }
+
+
+
+        public override string ToString()
+        {
+            return MostrarResultados();
+        }
 
     }
 }

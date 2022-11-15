@@ -16,8 +16,9 @@ namespace Entidades
         private string apellido;
         private string nombre;
         private int edad;
-        private int tantos;
+        private  int tantos;
         private List<Carta> tresCartas;
+
 
         public Jugador(int id, ETipoJugador tipo, string apodo, string apellido, string nombre, int edad)
         {

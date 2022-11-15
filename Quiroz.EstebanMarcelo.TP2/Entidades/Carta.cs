@@ -132,7 +132,7 @@ namespace Entidades
                             {
                                 if (this.Numero>3 && this.Numero <13) 
                                 {
-                                    if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.EPalo == EPalo.Oro) 
+                                    if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.Numero == 7 && this.EPalo == EPalo.Oro) 
                                     {
                                         respuesta = 1;
                                     }
@@ -153,7 +153,7 @@ namespace Entidades
                 case 2:
                     if (this.Numero > 3 && this.Numero < 13)
                     {
-                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.EPalo == EPalo.Oro)
+                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.Numero == 7 && this.EPalo == EPalo.Oro)
                         {
                             respuesta = 1;
                         }
@@ -178,7 +178,7 @@ namespace Entidades
                 case 3:
                     if (this.Numero > 3 && this.Numero < 13)
                     {
-                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.EPalo == EPalo.Oro)
+                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.Numero == 7 && this.EPalo == EPalo.Oro)
                         {
                             respuesta = 1;
                         }
@@ -195,7 +195,15 @@ namespace Entidades
                         }
                         else
                         {
-                            respuesta = -1;
+                            if (this.Numero == 1 && this.EPalo == EPalo.Espada || this.Numero == 1 && this.EPalo == EPalo.Basto)
+                            {
+                                respuesta = 1;
+                            }
+                            else 
+                            {
+                                respuesta = -1;
+                            }
+                            
                         }
 
                     }
@@ -215,7 +223,7 @@ namespace Entidades
                 case 5:
                     if (this.Numero == 4)
                     {
-                        respuesta = 1;
+                        respuesta = -1;
                     }
                     else
                     {
@@ -225,7 +233,7 @@ namespace Entidades
                         }
                         else 
                         {
-                            respuesta = -1;
+                            respuesta = 1;
                         }
                        
                     }
@@ -233,7 +241,7 @@ namespace Entidades
                 case 6:
                     if (this.Numero < 6 && this.numero >3)
                     {
-                        respuesta = 1;
+                        respuesta = -1;
                     }
                     else
                     {
@@ -243,7 +251,7 @@ namespace Entidades
                         }
                         else
                         {
-                            respuesta = -1;
+                            respuesta = 1;
                         }
 
                     }
@@ -252,33 +260,27 @@ namespace Entidades
                     switch (carta.EPalo) 
                     {
                         case EPalo.Espada:
-                            if (this.Numero==1 && this.EPalo==EPalo.Espada || this.EPalo == EPalo.Basto) 
+                            if (this.Numero==1 && this.EPalo==EPalo.Espada || this.Numero == 1 && this.EPalo == EPalo.Basto) 
                             {
                                 respuesta = 1;
                             }
                             else 
                             {
-                                if (this.Numero==7 && this.EPalo==EPalo.Espada) 
-                                {
-                                    respuesta = 0;
-                                }
-                                else 
-                                {
-                                    respuesta = -1;
-                                }
+                               respuesta = -1;
+                               
                             }
                         break;
 
                         case EPalo.Oro:
-                            if (this.Numero == 1 && this.EPalo == EPalo.Espada || this.EPalo == EPalo.Basto)
+                            if (this.Numero == 1 && this.EPalo == EPalo.Espada || this.Numero == 1 && this.EPalo == EPalo.Basto)
                             {
                                 respuesta = 1;
                             }
                             else
                             {
-                                if (this.Numero == 7 && this.EPalo == EPalo.Oro)
+                                if (this.Numero == 7 && this.EPalo == EPalo.Espada)
                                 {
-                                    respuesta = 0;
+                                    respuesta = 1;
                                 }
                                 else
                                 {
@@ -293,7 +295,7 @@ namespace Entidades
                             }
                             else 
                             {
-                                if (this.Numero == 7 && this.EPalo != EPalo.Espada || this.EPalo != EPalo.Oro)
+                                if (this.Numero == 7 && this.EPalo != EPalo.Espada || this.Numero == 7 && this.EPalo != EPalo.Oro)
                                 {
                                     respuesta = 0;
                                 }
@@ -309,7 +311,7 @@ namespace Entidades
                 case 10:
                     if (this.Numero > 3 && this.Numero < 7)
                     {
-                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.EPalo == EPalo.Oro)
+                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.Numero == 7 && this.EPalo == EPalo.Oro)
                         {
                             respuesta = 1;
                         }
@@ -333,7 +335,7 @@ namespace Entidades
                 case 11:
                     if (this.Numero > 3 && this.Numero < 11)
                     {
-                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.EPalo == EPalo.Oro)
+                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.Numero == 7 && this.EPalo == EPalo.Oro)
                         {
                             respuesta = 1;
                         }
@@ -358,7 +360,7 @@ namespace Entidades
 
                     if (this.Numero > 3 && this.Numero < 12)
                     {
-                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.EPalo == EPalo.Oro)
+                        if (this.Numero == 7 && this.EPalo == EPalo.Espada || this.Numero == 7 && this.EPalo == EPalo.Oro)
                         {
                             respuesta = 1;
                         }
