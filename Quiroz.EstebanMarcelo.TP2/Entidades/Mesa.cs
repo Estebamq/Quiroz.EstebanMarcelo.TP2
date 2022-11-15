@@ -23,13 +23,7 @@ namespace Entidades
             mazoDeCartas=new List<Carta>();
         }
 
-        private Mesa() 
-        {
-            jugadorUno = new Jugador();
-            jugadorDos = new Jugador();
-        }
-
-        public Mesa(int numero,Jugador jugadorUno,Jugador jugadorDos):this()
+        public Mesa(int numero,Jugador jugadorUno,Jugador jugadorDos)
         {
             this.numero = numero;
             this.jugadorUno = jugadorUno;

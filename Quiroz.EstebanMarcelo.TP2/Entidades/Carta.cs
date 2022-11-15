@@ -394,41 +394,28 @@ namespace Entidades
             int tantos=0;
             int contarTantos = 0;
             List<Carta> cartasTantos = new List<Carta>();
-            
-            
+            List<Carta> cartasTantosAux = new List<Carta>();
+
+
             if (cartasEnvido is not null)
             {
-                List<Carta> cartasTantosEspada = cartasEnvido.FindAll(carta => carta.EPalo == EPalo.Espada);
-                List<Carta> cartasTantosBasto = cartasEnvido.FindAll(carta => carta.EPalo == EPalo.Basto);
-                List<Carta> cartasTantosOro = cartasEnvido.FindAll(carta => carta.EPalo == EPalo.Oro);
-                List<Carta> cartasTantosCopa = cartasEnvido.FindAll(carta => carta.EPalo == EPalo.Copa);
+               
 
-                //busco cartas iguales
-                if (cartasTantosEspada.Count < 2 && cartasTantosBasto.Count<2 && cartasTantosCopa.Count<2  ) 
+
+                for (int i = 0; i < 4; i++)
                 {
+                    cartasTantosAux = cartasEnvido.FindAll(carta => carta.EPalo == (EPalo)i);
 
-                   cartasTantos = cartasTantosOro;
-                }
-                else 
-                {
-                    if (cartasTantosBasto.Count < 2 && cartasTantosCopa.Count < 2)
+                    if (cartasTantosAux.Count ==3) 
                     {
-                        cartasTantos = cartasTantosEspada;
+                        cartasTantos = cartasTantosAux;
+                        break;
                     }
-                    else 
+                    else if (cartasTantosAux.Count > 1) 
                     {
-                        if (cartasTantosBasto.Count < 2) 
-                        {
-                            cartasTantos = cartasTantosCopa;
-                        }
-                        else 
-                        {
-                            cartasTantos = cartasTantosOro;
-                        }
+                        cartasTantos = cartasTantosAux;
                     }
-
                 }
-
 
                 //determino el valor de los tantos
                 if (cartasTantos.Count > 1) 

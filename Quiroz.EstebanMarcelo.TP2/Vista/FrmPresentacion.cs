@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Vista
 {
-    public partial class Form1 : Form
+    public partial class FrmPresentacion : Form
     {
-        public Form1()
+        public FrmPresentacion()
         {
             InitializeComponent();
         }
-
     }
 }

@@ -13,8 +13,6 @@ namespace ConsolaPruebas
 
             int cont = 0;
             
-         
-
             Jugador jugadorUno = new Jugador(1,ETipoJugador.Maquina,"Lolo","Marquez","Luis",23);
             Jugador jugadorDos = new Jugador(2,ETipoJugador.Maquina,"Pepe","Vazquez","Raul",20);
             Mesa mesa = new(1,jugadorUno,jugadorDos);
@@ -38,14 +36,14 @@ namespace ConsolaPruebas
             Console.WriteLine(jugadorUno.ToString());
             Console.WriteLine("********** Jugador Dos***********");
             Console.WriteLine(jugadorDos.ToString());
+            Console.WriteLine("..................................\n");
+            Console.WriteLine("..................................\n");
 
-           
             Console.WriteLine(".............Segunda Ronda.........");
             mesa.RepartirCartas();
             mesa.RepartirCartas();
+            Console.WriteLine(".................Canto Envido.................\n");
             mesa.CantarEnvido("Quiero");
-
-            //carta tantos
 
 
             Console.WriteLine("********** Jugador Uno***********");
@@ -55,23 +53,19 @@ namespace ConsolaPruebas
 
             Console.WriteLine("..................................\n");
 
-
-            Console.WriteLine(".............Tercera Ronda.........");
-            mesa.RepartirCartas();
-            mesa.RepartirCartas();
-            mesa.CantarEnvido("Quiero");
-
-
+            Console.WriteLine(".................Canto Truco.................\n");
+            mesa.CantarTruco("Quiero");
             Console.WriteLine("********** Jugador Uno***********");
             Console.WriteLine(jugadorUno.ToString());
             Console.WriteLine("********** Jugador Dos***********");
             Console.WriteLine(jugadorDos.ToString());
-
+            Console.WriteLine("..................................\n");
             Console.WriteLine("..................................\n");
             
-            Console.WriteLine(".............Cuarta Ronda.........");
+            Console.WriteLine(".............Tercer Ronda.........");
             mesa.RepartirCartas();
             mesa.RepartirCartas();
+            Console.WriteLine(".................Canto Envido.................\n");
             mesa.CantarEnvido("Quiero");
 
 
@@ -81,6 +75,17 @@ namespace ConsolaPruebas
             Console.WriteLine(jugadorDos.ToString());
 
             Console.WriteLine("..................................\n");
+
+            Console.WriteLine(".................Canto Truco.................\n");
+            mesa.CantarTruco("Quiero");
+            Console.WriteLine("********** Jugador Uno***********");
+            Console.WriteLine(jugadorUno.ToString());
+            Console.WriteLine("********** Jugador Dos***********");
+            Console.WriteLine(jugadorDos.ToString());
+            Console.WriteLine("..................................\n");
+            Console.WriteLine("..................................\n");
+
+
 
 
             Console.WriteLine(".............Resultados.........");
