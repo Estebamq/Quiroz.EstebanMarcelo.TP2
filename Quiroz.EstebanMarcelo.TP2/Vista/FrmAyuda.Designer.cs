@@ -62,6 +62,7 @@ namespace Vista
             this.Controls.Add(this.rtbAyuda);
             this.Controls.Add(this.btnExportarTxt);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "FrmAyuda";
             this.ShowIcon = false;

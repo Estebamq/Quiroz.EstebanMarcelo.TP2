@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
+    /// <summary>
+    /// Trae las funciones basicas para jugar al truco, cada vez que se instancie la mesa
+    /// </summary>
     public class Mesa
     {
         private int numero;
@@ -66,6 +69,9 @@ namespace Entidades
         }
 
         //cargar cartas 
+        /// <summary>
+        /// Carga el mazo mezclado
+        /// </summary>
         public void CargarMazoMezclado()
         {
 
@@ -162,8 +168,7 @@ namespace Entidades
 
         }
 
-        //-realenvido
-        //-faltaEnvido
+        
         //-truco
         public void CantarTruco(string respuestaQuiero)
         {
@@ -208,11 +213,7 @@ namespace Entidades
 
         }
 
-        //retruco
-        //valecuatro
-
-
-        //Sumar puntos
+        
 
         //Mostrar resultados
         private string MostrarResultados()
@@ -263,7 +264,13 @@ namespace Entidades
 
 
 
-        //Delegados
+        //Delegados, task
+        /// <summary>
+        /// Utiliza Action para poder recibir parametros y ejecutarlos en otro hilo
+        /// </summary>
+        /// <param name="cantoTruco">mensaje para cantar truco</param>
+        /// <param name="cantoQuiero">mensaje para aceptar</param>
+        /// <param name="numeroRondas">Cuenta el numero de rondas</param>
         public static void CantarTrucoEnMesa(Action<string> cantoTruco, Action<string> cantoQuiero, Action<int> numeroRondas) 
         {
            

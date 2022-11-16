@@ -19,7 +19,10 @@ namespace EntidadesDAO
             sqlConection = new SqlConnection(connetionString);
         }
 
-
+        /// <summary>
+        /// Retorna la lista de jugadores de la base de datos
+        /// </summary>
+        /// <returns>lista de jugadores</returns>
         public static List<Jugador> TraerJugadoresADO() 
         {
 

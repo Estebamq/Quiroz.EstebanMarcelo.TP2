@@ -12,12 +12,14 @@ namespace ConsolaPruebas
         {
 
             int cont = 0;
-            
+            //cargo jugadores manuales
             Jugador jugadorUno = new Jugador(1,ETipoJugador.Maquina,"Lolo","Marquez","Luis",23);
             Jugador jugadorDos = new Jugador(2,ETipoJugador.Maquina,"Pepe","Vazquez","Raul",20);
             Mesa mesa = new(1,jugadorUno,jugadorDos);
+            //cargo mazo
             mesa.CargarMazoMezclado();
 
+            //rondas
             Console.WriteLine(".............Primera Ronda.........");
             mesa.RepartirCartas();
             Console.WriteLine(".................Canto Envido.................\n");
@@ -86,13 +88,14 @@ namespace ConsolaPruebas
 
 
 
-
+            //mostramos resultados
             Console.WriteLine(".............Resultados.........");
            
 
             Console.WriteLine(mesa.ToString());
             Console.WriteLine("..................................\n");
-           /*
+           
+            //cartas que quedaron en el mazo
             Console.WriteLine("**********Mazo Restante***********");
             foreach (Carta item in mesa.MazoDeCartas)
             {
@@ -101,7 +104,7 @@ namespace ConsolaPruebas
             }
             Console.WriteLine("*************************");
             Console.WriteLine($"Cantidad de cartas restantes: {cont}");
-           */
+           
             Console.ReadKey();
            
            

@@ -10,6 +10,11 @@ namespace Entidades
     public class SerializarArchivoAyuda : IArchivosArchivoAyuda<string>
     {
         
+            /// <summary>
+            /// Escribe datos recibiendo el path y el dato a escribir
+            /// </summary>
+            /// <param name="dato">string</param>
+            /// <param name="path">string</param>
             public void Escribir(string dato, string path)
             {
                 try
@@ -24,7 +29,8 @@ namespace Entidades
                     throw;
                 }
             }
-
+            
+            
             public string Leer(string path)
             {
                 string returnAux = string.Empty;

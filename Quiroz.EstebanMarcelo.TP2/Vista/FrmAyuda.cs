@@ -14,6 +14,9 @@ namespace Vista
 {
     public partial class FrmAyuda : Form
     {
+        /// <summary>
+        /// Formulario para encontrar ayuda
+        /// </summary>
         public FrmAyuda()
         {
             InitializeComponent();

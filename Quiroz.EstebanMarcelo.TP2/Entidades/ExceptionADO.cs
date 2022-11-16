@@ -8,7 +8,6 @@ namespace Entidades
 {
     public class ExceptionADO : Exception
     {
-
         public ExceptionADO(string message) : base(message)
         {
 
