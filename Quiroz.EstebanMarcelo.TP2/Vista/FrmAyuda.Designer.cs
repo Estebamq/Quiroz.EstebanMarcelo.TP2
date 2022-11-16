@@ -42,6 +42,7 @@ namespace Vista
             this.btnExportarTxt.TabIndex = 1;
             this.btnExportarTxt.Text = "Exportar";
             this.btnExportarTxt.UseVisualStyleBackColor = false;
+            this.btnExportarTxt.Click += new System.EventHandler(this.btnExportarTxt_Click);
             // 
             // rtbAyuda
             // 

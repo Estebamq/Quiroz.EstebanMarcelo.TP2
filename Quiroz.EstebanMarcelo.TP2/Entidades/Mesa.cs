@@ -36,7 +36,10 @@ namespace Entidades
 
         public List<Carta> MazoDeCartas
         {
-            get { return mazoDeCartas; }
+            get 
+            { 
+                return mazoDeCartas; 
+            }
         }
 
         public Jugador JugadorUno
@@ -215,7 +218,6 @@ namespace Entidades
         private string MostrarResultados()
         {
             StringBuilder sb = new StringBuilder();
-            string ganador;
 
             sb.AppendLine($"Jugador Uno: \n Apodo:{this.JugadorUno.Apodo}\n Tantos:{this.JugadorUno.Tantos} ");
             sb.AppendLine($"Jugador Dos: \n Apodo:{this.JugadorDos.Apodo}\n Tantos:{this.JugadorDos.Tantos} ");

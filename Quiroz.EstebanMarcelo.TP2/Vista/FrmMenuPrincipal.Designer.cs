@@ -41,9 +41,9 @@ namespace Vista
             this.btnSimular.BackgroundImage = global::Vista.Properties.Resources.personasJugar;
             this.btnSimular.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSimular.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSimular.Location = new System.Drawing.Point(130, 214);
+            this.btnSimular.Location = new System.Drawing.Point(159, 207);
             this.btnSimular.Name = "btnSimular";
-            this.btnSimular.Size = new System.Drawing.Size(258, 186);
+            this.btnSimular.Size = new System.Drawing.Size(251, 186);
             this.btnSimular.TabIndex = 0;
             this.btnSimular.Text = "Simular";
             this.btnSimular.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -69,9 +69,9 @@ namespace Vista
             this.btnEstadisticas.BackgroundImage = global::Vista.Properties.Resources.personasEstadisticas;
             this.btnEstadisticas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEstadisticas.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEstadisticas.Location = new System.Drawing.Point(518, 214);
+            this.btnEstadisticas.Location = new System.Drawing.Point(536, 207);
             this.btnEstadisticas.Name = "btnEstadisticas";
-            this.btnEstadisticas.Size = new System.Drawing.Size(258, 186);
+            this.btnEstadisticas.Size = new System.Drawing.Size(242, 186);
             this.btnEstadisticas.TabIndex = 3;
             this.btnEstadisticas.Text = "Estadisticas";
             this.btnEstadisticas.TextAlign = System.Drawing.ContentAlignment.BottomCenter;

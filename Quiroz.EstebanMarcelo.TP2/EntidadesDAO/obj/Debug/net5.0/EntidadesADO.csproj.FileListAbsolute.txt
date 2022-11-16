@@ -1,0 +1,12 @@
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\bin\Debug\net5.0\EntidadesADO.deps.json
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\bin\Debug\net5.0\EntidadesADO.dll
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\bin\Debug\net5.0\ref\EntidadesADO.dll
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\bin\Debug\net5.0\EntidadesADO.pdb
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\obj\Debug\net5.0\EntidadesADO.csproj.AssemblyReference.cache
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\obj\Debug\net5.0\EntidadesADO.GeneratedMSBuildEditorConfig.editorconfig
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\obj\Debug\net5.0\EntidadesADO.AssemblyInfoInputs.cache
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\obj\Debug\net5.0\EntidadesADO.AssemblyInfo.cs
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\obj\Debug\net5.0\EntidadesADO.csproj.CoreCompileInputs.cache
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\obj\Debug\net5.0\EntidadesADO.dll
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\obj\Debug\net5.0\ref\EntidadesADO.dll
+D:\facultad\MiCursada\PrograYLaboII\SP Labo II\Quiroz.EstebanMarcelo.TP2\EntidadesDAO\obj\Debug\net5.0\EntidadesADO.pdb

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
 
 namespace Vista
 {
@@ -33,6 +35,23 @@ namespace Vista
                         "Saludos");
             sb.AppendLine("\nAnte cualquier duda comunicarse al 0800-1234-Tecnico");
             return sb.ToString();
+        }
+
+        private void btnExportarTxt_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SerializarArchivoAyuda serializarArchivoAyuda = new SerializarArchivoAyuda();
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\ ayuda.txt";
+                serializarArchivoAyuda.Escribir(CargarInformacionAyuda(), path);
+                MessageBox.Show("Vea el archivo en el escritorio", "informacion");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error al exportar el archivo en el escritorio", "Error");
+                throw;
+            }
+            
         }
     }
 }
