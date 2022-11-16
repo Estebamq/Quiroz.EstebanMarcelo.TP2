@@ -29,30 +29,33 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             this.dgvEstadisticas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstadisticas)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(426, 493);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 42);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Exportar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnActualizar.BackColor = System.Drawing.Color.Red;
+            this.btnActualizar.Location = new System.Drawing.Point(426, 493);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(123, 42);
+            this.btnActualizar.TabIndex = 1;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // dgvEstadisticas
             // 
-            this.dgvEstadisticas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvEstadisticas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvEstadisticas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvEstadisticas.Enabled = false;
             this.dgvEstadisticas.Location = new System.Drawing.Point(12, 143);
+            this.dgvEstadisticas.MultiSelect = false;
             this.dgvEstadisticas.Name = "dgvEstadisticas";
+            this.dgvEstadisticas.ReadOnly = true;
             this.dgvEstadisticas.RowTemplate.Height = 25;
             this.dgvEstadisticas.Size = new System.Drawing.Size(957, 321);
             this.dgvEstadisticas.TabIndex = 2;
@@ -65,13 +68,14 @@ namespace Vista
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(981, 547);
             this.Controls.Add(this.dgvEstadisticas);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnActualizar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmEstadisticas";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadisticas";
+            this.Load += new System.EventHandler(this.FrmEstadisticas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEstadisticas)).EndInit();
             this.ResumeLayout(false);
 
@@ -79,7 +83,7 @@ namespace Vista
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.DataGridView dgvEstadisticas;
     }
 }

@@ -134,9 +134,6 @@
       "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "EntidadesADO": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Entidades.dll": {}
         },
@@ -148,6 +145,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Entidades": "1.0.0",
           "System.Data.SqlClient": "4.8.5"
         },
         "compile": {

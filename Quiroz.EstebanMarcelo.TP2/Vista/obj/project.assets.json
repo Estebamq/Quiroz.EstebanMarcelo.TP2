@@ -134,9 +134,6 @@
       "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
-        "dependencies": {
-          "EntidadesADO": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Entidades.dll": {}
         },
@@ -148,6 +145,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Entidades": "1.0.0",
           "System.Data.SqlClient": "4.8.5"
         },
         "compile": {
@@ -486,7 +484,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
-      "Entidades >= 1.0.0"
+      "Entidades >= 1.0.0",
+      "EntidadesADO >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -522,6 +521,9 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
+            "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj": {
+              "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj"
+            },
             "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\Entidades\\Entidades.csproj": {
               "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\Entidades\\Entidades.csproj"
             }

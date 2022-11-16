@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
 using Entidades.Enumerados;
+using EntidadesDAO;
 
 
 
@@ -18,6 +19,8 @@ namespace Vista
     {
 
         private int contador;
+        private List<Jugador> jugadores;
+        int i = 0;
         public FrmMenuPrincipal()
         {
             InitializeComponent();
@@ -25,27 +28,81 @@ namespace Vista
         private void FrmMenuPrincipal_Load(object sender, EventArgs e)
         {
             contador = 1;
+            jugadores= new List<Jugador>();
+            
         }
         private void btnSimular_Click(object sender, EventArgs e)
         {
-            Jugador jugadorUno = new Jugador(1, ETipoJugador.Maquina, "Lolo", "Marquez", "Luis", 23);
-            Jugador jugadorDos = new Jugador(2, ETipoJugador.Maquina, "Pepe", "Vazquez", "Raul", 20);
-            Mesa mesa = new(this.contador, jugadorUno, jugadorDos);
-            FrmMesa frmMesa = new FrmMesa(mesa);
-            frmMesa.Show();
-            this.contador++;
+            Jugador jugadorUno = new Jugador();
+            Jugador jugadorDos = new Jugador();
+            try
+            {
+                jugadores = UsuarioAccesoDatos.TraerJugadoresADO();
+                if (i < jugadores.Count -1)
+                {
+                    jugadorUno = jugadores[i];
+                    jugadorDos = jugadores[i + 1];
+                    i++;
+                }
+                else 
+                {
+                    i = 0;
+                }
+                
+
+                if (jugadorUno is not null && jugadorDos is not null)
+                {
+                    Mesa mesa = new(this.contador, jugadorUno, jugadorDos);
+                    FrmMesa frmMesa = new FrmMesa(mesa);
+                    frmMesa.Show();
+                    this.contador++;
+
+                }
+
+            }
+            catch (ExceptionADO exADO) 
+            {
+                MessageBox.Show(exADO.Message, "Error");
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");//lo uso para ver los errores
+                MessageBox.Show("Error en el programa, llame al servicio tecnico", "Error");
+            }
+           
         }
 
         private void btnEstadisticas_Click(object sender, EventArgs e)
         {
-            FrmEstadisticas frmEstadisticas = new FrmEstadisticas();
-            frmEstadisticas.ShowDialog();
+            try 
+            { 
+                FrmEstadisticas frmEstadisticas = new FrmEstadisticas();
+                frmEstadisticas.ShowDialog();
+            }
+            catch (ExceptionADO exADO) 
+            {
+                MessageBox.Show(exADO.Message, "Error");
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");//lo uso para ver los errores
+                MessageBox.Show("Error en el programa, llame al servicio tecnico", "Error");
+            }
         }
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
-            FrmAyuda frmAyuda = new FrmAyuda();
-            frmAyuda.ShowDialog();
+            try
+            {
+                FrmAyuda frmAyuda = new FrmAyuda();
+                frmAyuda.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message, "Error");//lo uso para ver los errores
+                MessageBox.Show("Error en el programa, llame al servicio tecnico", "Error");
+            }
+           
         }
 
        

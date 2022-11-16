@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v5.0": {
       "Vista/1.0.0": {
         "dependencies": {
-          "Entidades": "1.0.0"
+          "Entidades": "1.0.0",
+          "EntidadesADO": "1.0.0"
         },
         "runtime": {
           "Vista.dll": {}
@@ -90,15 +91,13 @@
       },
       "System.Security.Principal.Windows/4.7.0": {},
       "Entidades/1.0.0": {
-        "dependencies": {
-          "EntidadesADO": "1.0.0"
-        },
         "runtime": {
           "Entidades.dll": {}
         }
       },
       "EntidadesADO/1.0.0": {
         "dependencies": {
+          "Entidades": "1.0.0",
           "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {

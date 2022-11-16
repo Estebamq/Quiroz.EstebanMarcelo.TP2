@@ -32,7 +32,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\Entidades\\Entidades.csproj": {
+                "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\Entidades\\Entidades.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -97,11 +101,7 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {
-              "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj": {
-                "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -161,6 +161,9 @@
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
+              "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj": {
+                "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj"
+              },
               "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\Entidades\\Entidades.csproj": {
                 "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\Entidades\\Entidades.csproj"
               }

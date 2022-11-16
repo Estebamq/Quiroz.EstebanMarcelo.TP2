@@ -130,6 +130,16 @@
             "rid": "win"
           }
         }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
       }
     }
   },
@@ -446,10 +456,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Entidades/Entidades.csproj",
+      "msbuildProject": "../Entidades/Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Entidades >= 1.0.0",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
@@ -485,7 +501,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\Entidades\\Entidades.csproj": {
+              "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\Entidades\\Entidades.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
