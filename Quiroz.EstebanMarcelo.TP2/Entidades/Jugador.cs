@@ -17,8 +17,14 @@ namespace Entidades
         private string nombre;
         private int edad;
         private  int tantos;
+        private int puntaje;
         private List<Carta> tresCartas;
 
+
+        public Jugador(int id, ETipoJugador tipo, string apodo, string apellido, string nombre, int edad,int puntaje):this(id,tipo,apodo,apellido,nombre,edad) 
+        {
+            this.Puntaje = puntaje;
+        }
 
         public Jugador(int id, ETipoJugador tipo, string apodo, string apellido, string nombre, int edad)
         {
@@ -127,6 +133,8 @@ namespace Entidades
                 tresCartas = value; 
             } 
         }
+
+        public int Puntaje { get => puntaje; set => puntaje = value; }
 
         public static Jugador BuscarJugador(int id) 
         {

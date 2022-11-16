@@ -29,27 +29,27 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.btnExportarTxt = new System.Windows.Forms.Button();
+            this.rtbAyuda = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(39, 156);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(833, 304);
-            this.listBox1.TabIndex = 0;
             // 
             // btnExportarTxt
             // 
+            this.btnExportarTxt.BackColor = System.Drawing.Color.PaleGreen;
             this.btnExportarTxt.Location = new System.Drawing.Point(401, 476);
             this.btnExportarTxt.Name = "btnExportarTxt";
             this.btnExportarTxt.Size = new System.Drawing.Size(96, 30);
             this.btnExportarTxt.TabIndex = 1;
             this.btnExportarTxt.Text = "Exportar";
-            this.btnExportarTxt.UseVisualStyleBackColor = true;
+            this.btnExportarTxt.UseVisualStyleBackColor = false;
+            // 
+            // rtbAyuda
+            // 
+            this.rtbAyuda.Location = new System.Drawing.Point(85, 140);
+            this.rtbAyuda.Name = "rtbAyuda";
+            this.rtbAyuda.Size = new System.Drawing.Size(721, 330);
+            this.rtbAyuda.TabIndex = 2;
+            this.rtbAyuda.Text = "";
             // 
             // FrmAyuda
             // 
@@ -58,21 +58,21 @@ namespace Vista
             this.BackgroundImage = global::Vista.Properties.Resources.backgroundMenu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(903, 518);
+            this.Controls.Add(this.rtbAyuda);
             this.Controls.Add(this.btnExportarTxt);
-            this.Controls.Add(this.listBox1);
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "FrmAyuda";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ayuda";
+            this.Load += new System.EventHandler(this.FrmAyuda_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button btnExportarTxt;
+        private System.Windows.Forms.RichTextBox rtbAyuda;
     }
 }

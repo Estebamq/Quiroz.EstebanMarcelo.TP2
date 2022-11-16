@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\EntidadesDAO\EntidadesDAO.csproj" />
+    <ProjectReference Include="..\EntidadesDAO\EntidadesADO.csproj" />
     <ProjectReference Include="..\Entidades\Entidades.csproj" />
   </ItemGroup>
 

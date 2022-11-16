@@ -20,7 +20,6 @@ namespace ConsolaPruebas
 
             Console.WriteLine(".............Primera Ronda.........");
             mesa.RepartirCartas();
-            mesa.RepartirCartas();
             Console.WriteLine(".................Canto Envido.................\n");
             mesa.CantarEnvido("Quiero");
 

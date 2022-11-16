@@ -4,12 +4,12 @@
     "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\Vista\\Vista.csproj": {}
   },
   "projects": {
-    "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesDAO.csproj": {
+    "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesDAO.csproj",
-        "projectName": "EntidadesDAO",
-        "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesDAO.csproj",
+        "projectUniqueName": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj",
+        "projectName": "EntidadesADO",
+        "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj",
         "packagesPath": "C:\\Users\\Marce\\.nuget\\packages\\",
         "outputPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\obj\\",
         "projectStyle": "PackageReference",
@@ -44,6 +44,12 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -92,8 +98,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesDAO.csproj": {
-                "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesDAO.csproj"
+              "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj": {
+                "projectPath": "D:\\facultad\\MiCursada\\PrograYLaboII\\SP Labo II\\Quiroz.EstebanMarcelo.TP2\\EntidadesDAO\\EntidadesADO.csproj"
               }
             }
           }

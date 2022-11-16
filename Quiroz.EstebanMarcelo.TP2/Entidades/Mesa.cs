@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 
@@ -14,18 +15,21 @@ namespace Entidades
         private static Random rng;
         private Jugador jugadorUno;
         private Jugador jugadorDos;
+        private static int numeroRonda;
 
-       
+
 
         static Mesa()
         {
             rng = new Random();
             mazoDeCartas=new List<Carta>();
+            numeroRonda = 1;
         }
 
         public Mesa(int numero,Jugador jugadorUno,Jugador jugadorDos)
         {
             this.numero = numero;
+            numeroRonda = 1;
             this.jugadorUno = jugadorUno;
             this.jugadorDos = jugadorDos;
         }
@@ -34,6 +38,30 @@ namespace Entidades
         {
             get { return mazoDeCartas; }
         }
+
+        public Jugador JugadorUno
+        {
+            get 
+            { 
+                return jugadorUno; 
+            }
+        }
+        public Jugador JugadorDos
+        {
+            get 
+            { 
+                return jugadorDos; 
+            }
+        }
+
+        public int Numero
+        {
+            get 
+            {
+                return numero; 
+            } 
+        }
+
         //cargar cartas 
         public void CargarMazoMezclado()
         {
@@ -73,8 +101,8 @@ namespace Entidades
         //Repartir
         public void RepartirCartas()
         {
-            this.DarCartasJugador(this.jugadorUno);
-            this.DarCartasJugador(this.jugadorDos);
+            this.DarCartasJugador(this.JugadorUno);
+            this.DarCartasJugador(this.JugadorDos);
             
         }
 
@@ -114,17 +142,17 @@ namespace Entidades
 
             if (respuestaQuiero == "Quiero")
             {
-                tantosUno = Carta.DevolverTantosParaEnvido(this.jugadorUno.TresCartas);
-                tantosDos = Carta.DevolverTantosParaEnvido(this.jugadorDos.TresCartas);
+                tantosUno = Carta.DevolverTantosParaEnvido(this.JugadorUno.TresCartas);
+                tantosDos = Carta.DevolverTantosParaEnvido(this.JugadorDos.TresCartas);
 
 
                 if (tantosUno > tantosDos) 
                 {
-                    this.jugadorUno.Tantos += 2;
+                    this.JugadorUno.Tantos += 2;
                 }
                 else if(tantosDos>tantosUno) 
                 {
-                    this.jugadorDos.Tantos += 2;
+                    this.JugadorDos.Tantos += 2;
                 }
                 
             }
@@ -136,7 +164,7 @@ namespace Entidades
         //-truco
         public void CantarTruco(string respuestaQuiero)
         {
-            List<Carta> cartasJugadorDos = this.jugadorDos.TresCartas;
+            List<Carta> cartasJugadorDos = this.JugadorDos.TresCartas;
             int i=0;
             int ronda;
             int rondaGanadaJugadorUno=0;
@@ -144,7 +172,7 @@ namespace Entidades
 
             if (respuestaQuiero == "Quiero") 
             {
-                foreach (Carta item in this.jugadorUno.TresCartas)
+                foreach (Carta item in this.JugadorUno.TresCartas)
                 {
 
                     ronda = item.DevolverTantosTruco(cartasJugadorDos[i]);
@@ -164,12 +192,12 @@ namespace Entidades
 
                 if (rondaGanadaJugadorUno > rondaGanadaJugadorDos)
                 {
-                    this.jugadorUno.Tantos += 2;
+                    this.JugadorUno.Tantos += 2;
                 }
                 else if (rondaGanadaJugadorUno < rondaGanadaJugadorDos)
                 {
 
-                    this.jugadorDos.Tantos += 2;
+                    this.JugadorDos.Tantos += 2;
                 }
             }
             
@@ -189,29 +217,38 @@ namespace Entidades
             StringBuilder sb = new StringBuilder();
             string ganador;
 
-            sb.AppendLine($"Jugador Uno: \n Apodo:{this.jugadorUno.Apodo}\n Tantos:{this.jugadorUno.Tantos} ");
-            sb.AppendLine($"Jugador Dos: \n Apodo:{this.jugadorDos.Apodo}\n Tantos:{this.jugadorDos.Tantos} ");
-            if (jugadorUno.Tantos > jugadorDos.Tantos)
-            {
-
-                ganador = "Jugador Uno";
-            }
-            else
-            {
-                if (jugadorUno.Tantos == jugadorDos.Tantos)
-                {
-                    ganador = "Empate";
-                }
-                else
-                {
-                    ganador = "Jugador Dos";
-                }
-
-            }
-            sb.AppendLine($"Ganador: {ganador}");
+            sb.AppendLine($"Jugador Uno: \n Apodo:{this.JugadorUno.Apodo}\n Tantos:{this.JugadorUno.Tantos} ");
+            sb.AppendLine($"Jugador Dos: \n Apodo:{this.JugadorDos.Apodo}\n Tantos:{this.JugadorDos.Tantos} ");
+            
+            sb.AppendLine($"Ganador: {MostrarGanador()}");
 
 
             return sb.ToString();
+
+        }
+
+        public string MostrarGanador() 
+        {
+            string resultado;
+            if (this.JugadorUno.Tantos > this.JugadorDos.Tantos)
+            {
+
+                resultado = "Jugador Uno";
+            }
+            else
+            {
+                if (this.JugadorUno.Tantos == this.JugadorDos.Tantos)
+                {
+                    resultado = "Empate";
+                }
+                else
+                {
+                    resultado = "Jugador Dos";
+                }
+
+            }
+
+            return resultado;
 
         }
 
@@ -220,6 +257,26 @@ namespace Entidades
         public override string ToString()
         {
             return MostrarResultados();
+        }
+
+
+
+        //Delegados
+        public static void CantarTrucoEnMesa(Action<string> cantoTruco, Action<string> cantoQuiero, Action<int> numeroRondas) 
+        {
+           
+            Task.Run(()=> 
+            {
+                cantoTruco.Invoke("Truco");
+                Thread.Sleep(2000);
+                cantoQuiero.Invoke("Quiero");
+                Thread.Sleep(2000);
+                cantoTruco.Invoke(" ");
+                cantoQuiero.Invoke(" ");
+                numeroRondas.Invoke(numeroRonda++);
+                
+            });
+
         }
 
     }

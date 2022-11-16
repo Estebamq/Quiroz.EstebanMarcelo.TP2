@@ -16,5 +16,23 @@ namespace Vista
         {
             InitializeComponent();
         }
+
+        private void FrmAyuda_Load(object sender, EventArgs e)
+        {
+            this.rtbAyuda.Text = CargarInformacionAyuda();
+        }
+
+        private string CargarInformacionAyuda()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine("*********Bienvenidos al Simulador Trucazzo *********");
+            sb.AppendLine("Para poder utilizar el presente programa puede ir presionando sobre las imagenes" +
+                        "cada una de ellas lo llevaran a un formulario donde usted puede encontrar informacion util" +
+                        "Por ejemplo: si necesita simular mesas presione varias veces el boton simular y podra observar distintas partidas" +
+                        "Saludos");
+            sb.AppendLine("\nAnte cualquier duda comunicarse al 0800-1234-Tecnico");
+            return sb.ToString();
+        }
     }
 }
