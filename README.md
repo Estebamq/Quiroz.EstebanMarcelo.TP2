@@ -1,4 +1,4 @@
-#  Aplicacion Simulador de truco "Trucazo"
+##  Aplicacion Simulador de truco "Trucazo"
 ![ImagenTruco](./img/backgroundInicio.png)
 
 
